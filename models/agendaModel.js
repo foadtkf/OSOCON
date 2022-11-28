@@ -1,29 +1,29 @@
 const mongoose = require("mongoose");
 
-const blogSchema = mongoose.Schema(
+const agendaSchema = mongoose.Schema(
   {
-    category: {
+    date: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: "Category",
+      ref: "Date",
     },
     title: {
       type: String,
       required: true,
     },
-    description: {
+    hallno: {
       type: String,
       required: true,
     },
-    image: {
+    speaker: {
       type: String,
       required: true,
     },
-    date: {
+    info: {
       type: String,
       required: true,
     },
-    author: {
+    detail: {
       type: String,
       required: true,
     },
@@ -34,4 +34,4 @@ const blogSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Blog", blogSchema);
+module.exports = mongoose.model("Agenda", agendaSchema);

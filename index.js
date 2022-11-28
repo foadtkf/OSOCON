@@ -10,10 +10,9 @@ const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(cors());
-app.use("/api/category", require("./routes/categoryRoutes"));
-app.use("/api/blog", require("./routes/blogRoutes"));
-// app.get("/api/category", (req, res) => {
+app.use("/api/date", require("./routes/dataRoutes"));
+app.use("/api/agenda", require("./routes/agendaRoutes"));
+// app.get("/api/date", (req, res) => {
 //   res.send("hello");
 // });
 app.listen(PORT, () => {
